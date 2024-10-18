@@ -9,4 +9,3 @@
 - [ ] fazer o depoy
 - [ ] documentar o projeto
 
-

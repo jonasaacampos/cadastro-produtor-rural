@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Produtores</title>
+</head>
+<body>
+    <h1>Lista de Produtores</h1>
+    <a href="{% url 'produtor_create' %}">Novo Produtor</a>
+    <ul>
+        {% for produtor in produtores %}
+            <li>
+                {{ produtor.nome }} - {{ produtor.cpf_cnpj }}
+                <a href="{% url 'produtor_update' produtor.pk %}">Editar</a>
+                <a href="{% url 'produtor_delete' produtor.pk %}">Excluir</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
